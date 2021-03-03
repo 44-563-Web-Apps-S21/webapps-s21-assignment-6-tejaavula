@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>Sixth Assignment</title>
+ </head>
+<body>
+
+<h2>Hidden things by Tejaswi Avula</h2>
+<form>
+    <label for="form1_Secret">Enter the secret word </label>
+    <input type ="password" id="form1_Secret" name="form1_Secret" min=10 max=50 step=2> <br>
+
+    <label for="form1_guess">Enter a guess</label>
+    <input type ="text" id="form1_guess" name="form1_guess" autofocus> <br>
+
+    <input type="button" onclick="processGuess()" value="Check the guess">
+</form>
+
+<p id="result">Results</p>
+<script> 
+    var correct=0;
+    var wrong=0;
+    function processGuess(){
+        console.log("Getting form values")
+        secret = document.getElementById("form1_Secret").value
+        guess = document.getElementById("form1_guess").value
+        
+        
+        out = document.getElementById("result")
+        if(secret==guess){
+            correct+=1;
+            alert("Congratulation")
+            out.innerHTML = "success attempts" + correct
+        } else {
+            wrong+=1;
+            alert("Sorry")
+            out.innerHTML = "wrong attempts" + wrong
+        }
+       
+
+    }
+</script>
+
+</body>
+</html>
