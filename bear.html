@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sixth Assignment Part3</title>
+</head>
+
+<body>
+
+    <h2>Tejaswi Avula builds a bear</h2>
+
+    <form>
+        <div>
+            <label for="cb1_hat">hat </label>
+            <input type="checkbox" id="cb1_hat" name="hat" value=hat> <br>
+
+            <label for="cb1_scarf">Scarf </label>
+            <input type="checkbox" id="cb1_scarf" name="scarf" value=scarf> <br>
+
+            <label for="cb1_shirt">Shirt</label>
+            <input type="checkbox" id="cb1_shirt" name="shirt" value="shirt"> <br>
+
+            <input type="button" onclick="startBear()" value="Start a bear">
+        </div>
+
+    </form>
+    <p id="result">This text will be replaced </p>
+ <script>
+        var my_bear;
+        function startBear() {
+
+            my_bear = "";
+
+            hat = document.getElementById("cb1_hat").checked
+            scarf= document.getElementById("cb1_scarf").checked
+            shirt= document.getElementById("cb1_shirt").checked
+            my_bear = "hat : " + hat + " "+"scarf:  " + scarf +" " +"shirt:  " + shirt;
+
+            out = document.getElementById("result")
+
+            out.innerHTML = my_bear
+        }
+
+</script>
+</body>
+</html>
